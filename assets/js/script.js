@@ -114,11 +114,12 @@ var completeEditTask = function(taskName, taskType, taskId) {
 var taskButtonHandler = function(event) {
   // get target element from event
   var targetEl = event.target;
-
+  // edit button was clicked
   if (targetEl.matches(".edit-btn")) {
     console.log("edit", targetEl);
     var taskId = targetEl.getAttribute("data-task-id");
     editTask(taskId);
+    // delete button was clicked
   } else if (targetEl.matches(".delete-btn")) {
     console.log("delete", targetEl);
     var taskId = targetEl.getAttribute("data-task-id");
